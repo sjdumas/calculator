@@ -10,7 +10,7 @@ const operatorsContainer = document.querySelector(".operator-buttons");
 const MAX_DIGIT_DISPLAY_LENGTH = 10;
 const specialOperationValues = ["AC", "+/-", "%"];
 const keypadValues = ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0", ".", "⌫"];
-const operatorValues = ["+", "-", "*", "/"];
+const operatorValues = ["+", "-", "x", "/"];
 
 const add = (...numbers) => numbers.reduce((acc, num) => acc + num, 0);
 const subtract = (...numbers) => numbers.reduce((acc, num) => acc - num);
@@ -23,7 +23,7 @@ const operate = (operator, num1, num2) => {
 			return add(num1, num2);
 		case "-": 
 			return subtract(num1, num2);
-		case "*": 
+		case "x": 
 			return multiply(num1, num2);
 		case "/": 
 			return divide(num1, num2);
