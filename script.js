@@ -146,6 +146,8 @@ document.addEventListener("keydown", (event) => {
 
 	if (!isNaN(key) || key === ".") {
 		updateDisplay(key);
+	} else if (key === "*" || operatorValues.includes(key)) {
+		handleMathOperators(key === "*" ? "x" : key);
 	} else if (operatorValues.includes(key)) {
 		handleMathOperators(key);
 	} else if (key === "Enter" || key === "=") {
