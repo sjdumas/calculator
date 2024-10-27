@@ -64,6 +64,10 @@ const handleMathOperators = (op) => {
 };
 
 const handleSpecialOperations = (specialOp) => {
+	if (!displayValue) {
+		displayValue = 0;
+	}
+	
 	switch (specialOp) {
 		case "+/-":
 			displayValue = (parseFloat(displayValue) * -1).toString();
